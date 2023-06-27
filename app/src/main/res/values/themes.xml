@@ -1,0 +1,37 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.UsBankInterview" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.UsBankInterview" parent="Base.Theme.UsBankInterview" />
+
+    <style name="MySparkViewStyle">
+        <item name="spark_lineColor">@color/line_color</item>
+        <item name="spark_lineWidth">5dp</item>
+        <item name="spark_cornerRadius">20dp</item>
+        <item name="spark_fill">false</item>
+
+        <item name="spark_baseLineColor">@color/line_color</item>
+        <item name="spark_baseLineWidth">5dp</item>
+
+        <item name="spark_scrubLineColor">@color/line_color</item>
+        <item name="spark_scrubLineWidth">5dp</item>
+        <item name="spark_scrubEnabled">true</item>
+
+        <item name="spark_animateChanges">true</item>
+    </style>
+
+    <style name="title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/aldrich</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="scale" parent="title">
+        <item name="android:textSize">14sp</item>
+    </style>
+</resources>

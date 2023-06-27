@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.view.MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/title"
+        android:layout_margin="16dp"
+        android:text="@string/updating_graph_live"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+        <TextView
+            android:id="@+id/tvxAxis1"
+            style="@style/scale"
+            android:text="@string/number_one"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/glVertical1"
+            app:layout_constraintStart_toStartOf="@+id/glVertical1"
+            app:layout_constraintTop_toTopOf="@+id/glHorizontal3" />
+
+        <TextView
+            android:id="@+id/tvxAxis2"
+            style="@style/scale"
+            android:text="@string/number_five"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/glVertical2"
+            app:layout_constraintStart_toStartOf="@+id/glVertical2"
+            app:layout_constraintTop_toTopOf="@+id/glHorizontal3" />
+
+        <TextView
+            android:id="@+id/tvxAxis3"
+            style="@style/scale"
+            android:text="@string/number_ten"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/glVertical3"
+            app:layout_constraintStart_toStartOf="@+id/glVertical3"
+            app:layout_constraintTop_toTopOf="@+id/glHorizontal3" />
+
+        <TextView
+            android:id="@+id/tvyAxis1"
+            style="@style/scale"
+            android:text="@string/number_one"
+            app:layout_constraintBottom_toTopOf="@+id/glHorizontal3"
+            app:layout_constraintEnd_toStartOf="@+id/glVertical1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/glHorizontal3" />
+
+        <TextView
+            android:id="@+id/tvyAxis2"
+            style="@style/scale"
+            android:text="@string/number_fifty"
+            app:layout_constraintBottom_toTopOf="@+id/glHorizontal2"
+            app:layout_constraintEnd_toStartOf="@+id/glVertical1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/glHorizontal2" />
+
+        <TextView
+            android:id="@+id/tvyAxis3"
+            style="@style/scale"
+            android:text="@string/number_one_hundred"
+            app:layout_constraintBottom_toTopOf="@+id/glHorizontal1"
+            app:layout_constraintEnd_toStartOf="@+id/glVertical1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/glHorizontal1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glVertical1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.0833" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glVertical2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glVertical3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9166" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glHorizontal1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.0833" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glHorizontal2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glHorizontal3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.9166" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="3dp"
+            app:layout_constraintBottom_toTopOf="@+id/glHorizontal3"
+            app:layout_constraintEnd_toStartOf="@+id/glVertical3"
+            app:layout_constraintStart_toStartOf="@+id/glVertical1"
+            app:layout_constraintTop_toTopOf="@+id/glHorizontal1">
+
+            <com.robinhood.spark.SparkView
+                android:id="@+id/sparkview"
+                style="@style/MySparkViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:spark_scrubEnabled="true" />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

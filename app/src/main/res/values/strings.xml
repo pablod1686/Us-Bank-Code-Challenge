@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">UsBankInterview</string>
+    <string name="updating_graph_live">Updating the Graph live…</string>
+    <string name="number_one">1</string>
+    <string name="number_five">5</string>
+    <string name="number_ten">10</string>
+    <string name="number_fifty">50</string>
+    <string name="number_one_hundred">100</string>
+</resources>
